@@ -24,14 +24,14 @@
       "type": "go",
       "request": "launch",
       "mode": "auto",
-      "program": "${workspaceFolder}/mfa_test/server/main.go"
+      "program": "${workspaceFolder}/mfa/server/main.go"
     },
     {
       "name": "MFA Client",
       "type": "go",
       "request": "launch",
       "mode": "auto",
-      "program": "${workspaceFolder}/mfa_test/client/main.go"
+      "program": "${workspaceFolder}/mfa/client/main.go"
     }        
   ]
 }
