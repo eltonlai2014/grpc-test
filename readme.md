@@ -2,9 +2,11 @@
 ```
 project/
 ├── proto/                  # 放置所有 .proto 文件
-│   ├── hello.proto         # gRPC 協議定義
-│   ├── hello.pb.go         # protoc 生成的消息代碼
-│   └── hello_grpc.pb.go    # protoc 生成的 gRPC 服務代碼
+│   └── hello.proto         # gRPC 協議定義
+├── helloworld/
+│   └── proto/                  # 放置 .proto 生成的文件
+│       ├── hello.pb.go         # protoc 生成的消息代碼
+│       └── hello_grpc.pb.go    # protoc 生成的 gRPC 服務代碼
 ├── server/                 # 服務端代碼
 │   └── main.go
 ├── client/                 # 客戶端代碼
@@ -24,4 +26,5 @@ dlv version
 go install github.com/go-delve/delve/cmd/dlv@latest
 
 protoc --go_out=. --go-grpc_out=. proto/hello.proto
+protoc --go_out=. --go-grpc_out=. proto/mfa.proto
 ```

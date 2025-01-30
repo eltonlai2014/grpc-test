@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package mfa;
+
+option go_package = "mfa/proto;proto";
+
+service MfaService {
+  rpc GetQRcodeImg (QRcodeRequest) returns (QRcodeResponse);
+}
+
+message QRcodeResponse {
+  string filename = 1;
+  bytes data = 2; // imgData
+}
+
+message QRcodeRequest {
+  string message = 1;
+}

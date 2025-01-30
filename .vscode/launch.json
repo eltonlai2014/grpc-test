@@ -18,6 +18,20 @@
       "request": "launch",
       "mode": "auto",
       "program": "${workspaceFolder}/client/main.go"
-    }    
+    },
+    {
+      "name": "MFA Server",
+      "type": "go",
+      "request": "launch",
+      "mode": "auto",
+      "program": "${workspaceFolder}/mfa_test/server/main.go"
+    },
+    {
+      "name": "MFA Client",
+      "type": "go",
+      "request": "launch",
+      "mode": "auto",
+      "program": "${workspaceFolder}/mfa_test/client/main.go"
+    }        
   ]
 }
