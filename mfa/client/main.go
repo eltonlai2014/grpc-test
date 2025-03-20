@@ -24,7 +24,7 @@ func main() {
 	ctx, cancel := context.WithTimeout(context.Background(), time.Second)
 	defer cancel()
 
-	resp, err := client.GetQRcodeImg(ctx, &pb.QRcodeRequest{Message: "World"})
+	resp, err := client.GetQRcodeImg(ctx, &pb.QRcodeRequest{Message: "中文World"})
 	if err != nil {
 		log.Fatalf("Error while GetQRcodeImg: %v", err)
 	}

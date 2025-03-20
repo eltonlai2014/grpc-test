@@ -12,12 +12,15 @@ import (
 	"google.golang.org/grpc"
 )
 
+// 繼承未實作的Server
 type server struct {
 	pb.UnimplementedMfaServiceServer
 }
 
+// 實作GetQRcodeImg
 func (s *server) GetQRcodeImg(ctx context.Context, req *pb.QRcodeRequest) (*pb.QRcodeResponse, error) {
 	filename := req.GetMessage()
+	fmt.Println("len(filename)=", len(filename))
 	filePath := fmt.Sprintf(".\\images\\%s", "qrcode.png")
 
 	// 讀取圖片文件

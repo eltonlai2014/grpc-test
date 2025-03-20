@@ -1,4 +1,4 @@
-## 專案目錄說明
+## 專案目錄說明 go 1.23
 ```
 project/
 ├── proto/                  # 放置所有 .proto 文件
@@ -13,6 +13,15 @@ project/
 │   └── main.go
 ├── go.mod                  # Go 模組文件
 └── go.sum
+```
+
+## 建立執行檔
+```
+go build -o server.exe ./server
+go build -o client.exe ./client
+
+CGO_ENABLE=0 GOOS=linux go build -o server ./server
+CGO_ENABLE=0 GOOS=linux go build -o client.exe ./client
 ```
 
 ## 產生proto檔案
